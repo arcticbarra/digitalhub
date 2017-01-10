@@ -56,3 +56,7 @@ button .material-icons .btn-floating .btn-large{
 #fa-7 {
   font-size: 10rem;
 }
+
+@-ms-viewport{
+  width: device-width;
+}
