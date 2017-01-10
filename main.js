@@ -13,9 +13,17 @@ $(document).ready(function(){
        $('.back-to-top').tooltip('hide');
        $('body,html').animate({
            scrollTop: 0
-       }, 800);
+       }, 500);
        return false;
    });
 
    $('.back-to-top').tooltip('show');
+ });
+
+ $(document).on('click', 'a', function(event){
+     event.preventDefault();
+
+     $('html, body').animate({
+         scrollTop: $( $.attr(this, 'href') ).offset().top
+     }, 500);
  });
