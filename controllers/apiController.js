@@ -13,7 +13,7 @@ module.exports = function(app) {
       email: req.body.email,
       linkedin: req.body.linkedin,
       area: req.body.area,
-      pregunta: req.body.preguntas,
+      descripcion: req.body.preguntas,
     });
     newIntern.save(function(err) {
       if (err) throw err;

@@ -10,7 +10,7 @@ var internSchema = new Schema({
   email: String,
   linkedin: String,
   area: String,
-  pregunta: String,
+  descripcion: String,
 });
 
 var Interns = mongoose.model('interns', internSchema);
