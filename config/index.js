@@ -1,5 +1,5 @@
 module.exports = {
   getDbConnectionString: function() {
-    return process.env.PROD_MONGODB;
+    return process.env.MONGODB_URI;
   }
 };
