@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Digital Hub</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
@@ -15,17 +15,17 @@
     <!-- Nav -->
     <nav>
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo"><img src="images/logo.png" alt="Digital Hub"></a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <a href="#" class="brand-logo"><img src="/assets/img/logo.png" alt="Digital Hub"></a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons" id="menu">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <li><a href="#about">Acerca de</a></li>
           <li><a href="#pilares">Pilares</a></li>
-          <li><a href="#">Únete</a></li>
+          <li><a href="#unete">Únete</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
           <li><a href="#about" onclick="$('.button-collapse').sideNav('hide');">Acerca De</a></li>
           <li><a href="#pilares" onclick="$('.button-collapse').sideNav('hide');">Pilares</a></li>
-          <li><a href="#" onclick="$('.button-collapse').sideNav('hide');">Únete</a></li>
+          <li><a href="#unete" onclick="$('.button-collapse').sideNav('hide');">Únete</a></li>
         </ul>
       </div>
     </nav>
@@ -35,9 +35,11 @@
     </div>
 
     <!-- About -->
+
     <div id="about" class="container">
       <div class="center">
         <h1>Somos Digital Hub</h1>
+        <hr>
         <p>En el Digital Hub tenemos dos <strong>principales objetivos</strong> para las cuentas institucionales del Tecnológico de Monterrey</p>
         <div class="center row">
           <div class="col m6 s12">
@@ -60,28 +62,96 @@
 
     <div id="pilares" class="container">
       <h4 class="center"><strong>Nuestros 4 Pilares</strong></h4>
+      <hr>
       <div class="row">
         <div class="center col m3 s12">
           <p class="promo-caption center">Social Media Intelligence</p>
-          <img src="images/listening.png" alt="" class="icon responsive-image">
+          <img src="/assets/img/listening.png" alt="" class="icon responsive-image">
           <p>Escucha y analiza los mensajes que giran alrededor del Tecnológico de Monterrey y sus marcas, generados dentro y fuera de los canales propietarios del Tecnológico de Monterrey (owned and earned).</p>
         </div>
         <div class="center col m3 s12">
           <p class="promo-caption center">Creatividad <br> Digital</p>
-          <img src="images/creatividad.png" alt="" class="icon responsive-image">
+          <img src="/assets/img/creatividad.png" alt="" class="icon responsive-image">
           <p>Genera contenido creativo y personalizado para las audiencias meta del Tecnológico de Monterrey, de acuerdo a la estrategia digital.</p>
         </div>
         <div class="center col m3 s12">
           <p class="promo-caption center">Engagement y canales digitales</p>
-          <img src="images/engagement.png" alt="" class="icon responsive-image">
+          <img src="/assets/img/engagement.png" alt="" class="icon responsive-image">
             <p>Distribuye las piezas de contenido personalizado a través de los diferentes canales digitales más apropiados, para cada una de las audiencias, en el momento más preciso.</p>
         </div>
         <div class="center col m3 s12">
           <p class="promo-caption center">Big <br> Data</p>
-          <img src="images/bigdata.png" alt="" class="icon responsive-image">
+          <img src="/assets/img/bigdata.png" alt="" class="icon responsive-image">
           <p>Descubre, analiza y explota una gran cantidad de datos que provienen de redes sociales y otras fuentes de información, que nos permitirá crear nuevos servicios para cada institución, toma de decisiones y entre otros proyectos de innovación.</p>
         </div>
       </div>
+    </div>
+    <div class="parallax-container">
+      <div class="parallax"><img src="https://images.unsplash.com/photo-1427751840561-9852520f8ce8?dpr=2&auto=format&fit=crop&w=1500&h=994&q=80&cs=tinysrgb&crop="></div>
+    </div>
+
+    <!-- Join us -->
+
+    <div class="container" id="unete">
+      <h3 class="center">Únete al equipo</h3>
+      <hr>
+      <p class="center">¿Te gustaría formar parte de nuestro equipo de interns? Llena el siguiente formulario.</p>
+      <div class="thanks center"></div>
+      <div class="row">
+      <form class="col s12" action="/api/email" enctype="multipart/form-data" method="post">
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="first_name" name="name" type="text" class="validate">
+            <label for="first_name">Nombre Completo</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="last_name" name="apellidos" type="text" class="validate">
+            <label for="last_name">Apellidos</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="email" name="email" type="email" class="validate">
+            <label for="email">Correo</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="semestre" name="semestre" type="number" class="validate">
+            <label for="semestre">Semestre</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="linkedin" name="linkedin" type="text" class="validate">
+            <label for="linkedin">Perfil de LinkedIn</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="matricula" name="matricula" type="text" class="validate">
+            <label for="matricula">Matrícula</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <select name="area">
+              <option value="" >Selecciona una opción</option>
+              <option value="Social Media Intelligence">Social Media Intelligence</option>
+              <option value="Creatividad Digital">Creatividad Digital</option>
+              <option value="Engagement">Engagement y Canales Digitales</option>
+              <option value="Big Data">Big Data</option>
+            </select>
+            <label>Area de interés</label>
+          </div>
+        </div>
+        <div class="row">
+        <div class="input-field col s12">
+          <textarea id="textarea1" class="materialize-textarea" name="preguntas"></textarea>
+          <label for="textarea1">¿Por qué quieres trabajar en Digital Hub?</label>
+        </div>
+      </div>
+      <button class="btn waves-effect waves-light" id="enviar" type="submit" name="action">Enviar
+         <i class="material-icons right">send</i>
+       </button>
+      </form>
+    </div>
     </div>
 
     <!-- Footer -->
@@ -111,9 +181,10 @@
       </div>
     </footer>
 
+    <%# Back to top %>
      <button class="back-to-top btn-floating btn-large waves-effect waves-light blue lighten-1"><i class="material-icons">keyboard_arrow_up</i></button>
 
-    <script src="main.js" charset="utf-8"></script>
+    <script src="/assets/js/main.js" charset="utf-8"></script>
 
   </body>
 </html>

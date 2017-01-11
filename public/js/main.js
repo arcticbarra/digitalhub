@@ -1,6 +1,7 @@
 $(document).ready(function(){
   $(".button-collapse").sideNav();
   $('.parallax').parallax();
+  $('select').material_select();
   $(window).scroll(function () {
        if ($(this).scrollTop() > 50) {
            $('.back-to-top').fadeIn();
@@ -15,6 +16,16 @@ $(document).ready(function(){
            scrollTop: 0
        }, 500);
        return false;
+   });
+
+   var $form = $('form');
+   $form.submit(function(){
+      $.post($(this).attr('action'), $(this).serialize(), function(response){
+            console.log("message sent");
+          },'json');
+      $form.remove();
+      $('.thanks').append('<p><strong>Gracias por realizar tu solicitud. !Nos pondremos en contacto contigo pronto!</strong></p>')
+      return false;
    });
 
    $('.back-to-top').tooltip('show');

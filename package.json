@@ -1,0 +1,29 @@
+{
+  "name": "digitalhub",
+  "version": "1.0.0",
+  "description": "Site for the digital hub",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arcticbarra/digitalhub.git"
+  },
+  "author": "Enrique Barragan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arcticbarra/digitalhub/issues"
+  },
+  "homepage": "https://github.com/arcticbarra/digitalhub#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "nodemailer": "^2.7.0",
+    "nodemailer-mailgun-transport": "^1.2.4"
+  },
+  "engines": {
+    "node": "6.9.2"
+  }
+}
